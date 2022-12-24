@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+
+	
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-color:floralwhite;
+}
+
+.container{
+    width:1330px;
+}
+
+.flex{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+}
+
+.mt-8{
+  margin:20px 0;
+}
+
+.ltor{
+  left:0;
+  transition: 0.4s ease-in-out;
+}
+
+.background{
+  background-image: url('https://wallpaperaccess.com/full/7445.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: fixed;
+  top: 0px;
+  transition:0.4s ease-in-out;
+  right: 0px;
+  width: 70%;
+  height: 100%;
+  z-index: 1111;
+}
+
+.login, .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.register{
+    background-color: floralwhite;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+.box{
+    position:absolute;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width:550px;
+    height:700px;
+}
+
+.box .title{
+    position:absolute;
+    top:40px;
+    text-transform: uppercase;
+    font-size:33px;
+}
+
+div.omrs-input-group {
+  margin: 60px 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 20.4375rem;
+}
+
+/* Input*/
+.omrs-input-underlined > input,
+.omrs-input-filled > input {
+	border: none;
+	border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+	width: 100%;
+	height: 2rem;
+	font-size: 1.0625rem;
+	line-height: 147.6%;
+  padding:0.825rem 0.875rem 0.5rem 0.875rem;
+  background-color: transparent;
+}
+
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+	outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label,
+.omrs-input-filled > .omrs-input-label {
+	position: absolute;
+	top: 0;
+	left: 0.875rem;
+	line-height: 147.6%;
+	color: var(--omrs-color-ink-medium-contrast);
+	transition: top .2s;
+}
+
+
+.omrs-input-underlined > .omrs-input-helper,
+.omrs-input-filled > .omrs-input-helper {
+	font-size: 0.9375rem;
+	color: var(--omrs-color-ink-medium-contrast);
+	letter-spacing: 0.0275rem;
+	margin: 0.125rem 0.875rem;
+}
+
+.omrs-input-underlined > input:hover,
+.omrs-input-filled > input:hover {
+	background: var(--omrs-color-interaction-minus-two);
+	border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:valid + .omrs-input-label,
+.omrs-input-filled > input:focus + .omrs-input-label,
+.omrs-input-filled > input:valid + .omrs-input-label {
+	top: -20px;
+	font-size: 0.9375rem;
+	margin-bottom: 32px;;
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus + .omrs-input-label,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus + .omrs-input-label {
+	color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus {
+	border-color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus ~ svg,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus ~ svg {
+	fill: var(--omrs-color-ink-high-contrast);
+}
+
+.submit{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+
+.btn{
+  padding:8px 16px;
+  text-align: center;
+  border-radius:20px;
+  border:none;
+  width:200px;
+  background-color: #121212;
+  color:#fff;
+  cursor:pointer;
+}
