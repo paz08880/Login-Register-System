@@ -1,6 +1,20 @@
 let background = document.getElementById("background");
+let loginBox = document.getElementById("loginBox");
+let registerBox = document.querySelectorAll(".register");
+
 function switchScreen(){
     background.classList.toggle("ltor"); 
+
+    // media query to check
+var media_query = 'screen and (max-width:900px)';
+
+// matched or not
+var matched = window.matchMedia(media_query).matches;
+
+if(matched)
+    loginBox.style.backgroundColor = "blue";
+else
+	console.log('Screen is not between 320 and 1023 pixels');
 }
 
 
