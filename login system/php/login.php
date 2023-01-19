@@ -2,9 +2,9 @@
 session_start();
 require_once "config.php";
 
-$email = $password = "";
-$email_err = $password_err = "";
- 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $email = $password = "";
+    $email_err = $password_err = "";
 
 	$userEmail = $_POST['email'];
 	
@@ -59,4 +59,6 @@ $email_err = $password_err = "";
     }
 
 mysqli_close($con);
+
+}
 ?>
