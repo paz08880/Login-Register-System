@@ -194,13 +194,16 @@ div.omrs-input-group {
 
 @media screen and (max-width: 900px) {
   .background{
-    width: 0!important;
+    display: none;
   }
   .login{
-    z-index: 1111!important;
     min-width: 100%!important;
   }
   .register{
     left:1000px;
+  }
+  .toRegister{
+    left: 0px !important;
+    width: 100%;
   }
 }

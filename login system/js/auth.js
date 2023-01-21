@@ -1,23 +1,33 @@
 let background = document.getElementById("background");
 let loginBox = document.getElementById("loginBox");
-let registerBox = document.querySelectorAll(".register");
+let registerBox = document.getElementById("registerBox");
+let box = false;
 
 function switchScreen(){
-    background.classList.toggle("ltor"); 
 
     // media query to check
-var media_query = 'screen(max-width:900px)';
+const mediaQuery = window.matchMedia('(max-width: 990px)')
 
-// matched or not
-var matched = window.matchMedia(media_query).matches;
+mediaQuery.addListener(handleTabletChange)
 
-if(matched){
-    console.log('Screen is good');
 
-}else{
-	console.log('Screen is not between 320 and 1023 pixels');
+handleTabletChange(mediaQuery)
 }
-}
+
+
+function handleTabletChange(e) {
+    background.classList.toggle("ltor");
+    // Check if the media query is true
+    if (e.matches) {
+        if(box == false){ // if its register
+            box =! box;
+            registerBox.classList.toggle("toRegister"); 
+        }else if(box == true){ // if its login
+            box =! box;
+        }
+    }
+
+  }
 
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", (e) => {
