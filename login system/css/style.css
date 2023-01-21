@@ -51,7 +51,7 @@ body{
   top: 0px;
   transition:0.4s ease-in-out;
   right: 0px;
-  min-width: 70%;
+  width: 70%;
   height: 100%;
   z-index: 1111;
 }
@@ -194,7 +194,7 @@ div.omrs-input-group {
 
 @media screen and (max-width: 900px) {
   .background{
-    min-width: 0!important;
+    width: 0!important;
   }
   .login{
     z-index: 1111!important;

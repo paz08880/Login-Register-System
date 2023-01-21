@@ -6,17 +6,18 @@ function switchScreen(){
     background.classList.toggle("ltor"); 
 
     // media query to check
-var media_query = 'screen and (max-width:900px)';
+var media_query = 'screen(max-width:900px)';
 
 // matched or not
 var matched = window.matchMedia(media_query).matches;
 
-if(matched)
-    loginBox.style.backgroundColor = "blue";
-else
+if(matched){
+    console.log('Screen is good');
+
+}else{
 	console.log('Screen is not between 320 and 1023 pixels');
 }
-
+}
 
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", (e) => {
